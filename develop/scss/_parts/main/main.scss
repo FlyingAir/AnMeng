@@ -1,0 +1,126 @@
+@charset "UTF-8";
+@import 'base/base';
+.swiper-container {
+    .swiper-slide {
+        background: #fff;
+        a {
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+            img {
+                text-align: center;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}
+
+.list-block.accordion-list.row {
+    margin: 0;
+    margin-top: -8px;
+    >ul {
+        width: 100%;
+        display: -webkit-flex;
+        /* Safari */
+        display: flex;
+        flex-flow: row wrap;
+        >li {
+            width: 50%;
+            z-index:999;
+            a {
+                height: 60px;
+                color: #023894 !important;
+            }
+        }
+        >li:nth-child(even) .accordion-item-content {
+            margin-left: -100%;
+        }
+    }
+    .item01 {
+        background-color: #d198c3;
+    }
+    .item02 {
+        background-color: #023894;
+    }
+    .item03 {
+        background-color: #8aa3d4;
+    }
+    .item04 {
+        background-color: #4a70ba;
+    }
+    .item-title {
+        color: #FFFFFF;
+    }
+    .accordion-item-expanded:after {
+        content: '';
+        width: 0px;
+        height: 0px;
+        position: absolute;
+        top: 50px;
+        left: 50%;
+        transform: translate(-50%);
+        border-bottom: 10px solid #eeeeee;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+    }
+    .item-link .item-inner {
+        background-image: none !important;
+        padding: 0px 24px;
+        margin: 0 auto;
+        justify-content: center;
+
+        .item-title {
+            position: static;
+            text-overflow: inherit;
+            text-align: center;
+            font-size: 14px;
+            overflow: visible;
+            word-wrap: break-word;
+            word-break: normal;
+            white-space: inherit;
+            line-height: 16px;
+        }
+    }
+    .item-inner:after {}
+    .item-content.item-link {
+        padding-left: 0;
+    }
+    .content-block {
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        ul {
+            height: 30px;
+            line-height: 30px;
+            background-color: #eeeeee;
+            position: relative;
+            z-index: 9999;
+            display: -webkit-flex;
+            /* Safari */
+            display: flex;
+            li {
+                flex: 1;
+                z-index:99999;
+                text-align: center;
+            }
+        }
+    }
+    .accordion-item-content {
+        width: 200%;
+    }
+}
+
+
+.rec-content {
+    header{
+        background-color: #023894;
+        height:36px;
+        color:#ffffff;
+        text-align: center;
+        line-height: 36px;
+        span{
+
+        }
+    }
+}

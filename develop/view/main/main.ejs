@@ -1,0 +1,113 @@
+<div class="statusbar-overlay"></div>
+<div class="panel-overlay"></div>
+<div class="views">
+    <div class="view view-main">
+        <div data-page="main" class="page page-on-center main_page">
+            <% include ./_parts/top %>
+                <div class="main_content">
+                    <!-- Slider -->
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><a href="#"><img src="./img/banner01.png" alt=""></a></div>
+                           <!--  <div class="swiper-slide"><span>Slide 2</span></div>
+                            <div class="swiper-slide"><span>Slide 3</span></div>
+                            <div class="swiper-slide"><span>Slide 4</span></div> -->
+                        </div>
+                        <!-- <div class="swiper-pagination"></div> -->
+                    </div>
+                    <!-- List View -->
+                    <div class="list-block accordion-list row">
+                        <ul>
+                            <li class="accordion-item col-50">
+                                <a href="#" class="item-content item-link item01">
+                                    <div class="item-inner">
+                                        <div class="item-title">安柏教育</div>
+                                    </div>
+                                </a>
+                                <div class="accordion-item-content">
+                                    <div class="content-block">
+                                        <ul>
+                                            <li><a href="">集团简介</a></li>
+                                            <li><a href="">教育理念</a></li>
+                                            <li><a href="">创始人说</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="accordion-item col-50 ">
+                                <a href="#" class="item-content item-link item02">
+                                    <div class="item-inner">
+                                        <div class="item-title">长江0-3岁科学育儿 国际研究院</div>
+                                    </div>
+                                </a>
+                                <div class="accordion-item-content">
+                                    <div class="content-block">
+                                        <ul>
+                                            <li><a href="">育儿书籍推荐</a></li>
+                                            <li><a href="">感统音乐课程</a></li>
+                                            <li><a href="">科学育儿课程</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="accordion-item col-50">
+                                <a href="#" class="item-content item-link item03">
+                                    <div class="item-inner">
+                                        <div class="item-title">私立幼儿园</div>
+                                    </div>
+                                </a>
+                                <div class="accordion-item-content">
+                                    <div class="content-block">
+                                        <ul>
+                                            <li><a href="">上海市静安区民办安蒙幼儿园</a></li>
+                                            <li><a href="">预约参观</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="accordion-item col-50">
+                                <a href="#" class="item-content item-link item04">
+                                    <div class="item-inner">
+                                        <div class="item-title">培训学校</div>
+                                    </div>
+                                </a>
+                                <div class="accordion-item-content">
+                                    <div class="content-block">
+                                        <ul>
+                                            <li><a href="">安柏成人培训学校</a></li>
+                                            <li><a href="">培训报名</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- 最新推荐 -->
+                    <div class="rec-content">
+                        <header>最新推荐<span> NEW collection……</span></header>
+                        <div class="page-content">
+                            <!-- Slider -->
+                            <div class="swiper-container">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide"><span>Slide 1</span></div>
+                                    <div class="swiper-slide"><span>Slide 2</span></div>
+                                    <div class="swiper-slide"><span>Slide 3</span></div>
+                                    <div class="swiper-slide"><span>Slide 4</span></div>
+                                </div>
+                                <div class="swiper-pagination"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+    <% include ./_parts/bottom %>
+</div>
+<script>
+var myApp = new Framework7();
+
+// Init slider and store its instance in mySwiper variable
+var mySwiper = myApp.swiper('.swiper-container', {
+    pagination: '.swiper-pagination'
+});
+</script>

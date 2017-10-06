@@ -1,5 +1,5 @@
-import {getAllUrlQuery} from '../util/utils';
-import {MyApp,MainView} from './F7Params';
+import {getAllUrlQuery} from '../util/utils.js';
+import {MyApp,MainView} from './F7Params.js';
 
 export default class Router {
     constructor(){
