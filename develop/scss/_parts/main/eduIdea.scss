@@ -1,0 +1,28 @@
+@charset "UTF-8";
+@import 'base/base';
+.eduIdea_page {
+    .main-container {
+        .text-header {
+            font-size: .30rem;
+            line-height: .60rem;
+        }
+        p {
+            font-size: .26rem;
+            line-height: .40rem;
+            padding-left: .26rem;
+            text-align: justify;
+        }
+        .main-ul li:nth-child(odd) .text-header {
+            color: #023894;
+        }
+        .main-ul li:nth-child(even) .text-header {
+            color: #df8dba;
+        }
+        .pic-content {
+            padding: .30rem .60rem;
+            img {
+                width: 100%;
+            }
+        }
+    }
+}

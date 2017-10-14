@@ -1,0 +1,25 @@
+.bottom-bar{
+	height:1rem;
+	background-color: #023894;
+	.back-top{
+	font-size: .28rem;
+	color:#ffffff;
+	text-align: center;
+	line-height: .6rem;
+	}
+	.back-to-top{
+	color:#ffffff;
+	display:inline-block;
+	width: .24rem;
+	height: .24rem;
+	background:url('../img/backToTop.png');
+	background-size:.24rem .24rem;
+	margin-left: .12rem;
+	}
+	.copy-right{
+		color:#ffffff;
+		text-align: center;
+		font-size:.18rem;
+		height:.4rem;
+	}
+}

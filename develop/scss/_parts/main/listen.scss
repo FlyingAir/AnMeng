@@ -1,0 +1,55 @@
+@charset "UTF-8";
+@import 'base/base';
+.listen_page{
+	.main-bottom {
+        height: .80rem;
+        background-color: #023894; // line-height: 1.10rem;
+        margin: 0 auto;
+        width: 100%;
+        border-radius: .40rem;
+        .qc-img {
+            float: left;
+            width: .76rem;
+            height: .76rem;
+            margin-left: .5rem;
+            padding-top: .02rem;
+            padding-left: .02rem;
+            display: inline-block;
+            img{
+            	width: 100%;
+            }
+        }
+        .text-content {
+            display: inline-block;
+            width: 70%;
+            color: #ffffff;
+            font-size: .26rem;
+            margin-top: 0;
+            padding-left: .2rem;
+
+        }
+    }
+	.audio-main{
+		header{
+			font-size: .30rem;
+			font-weight:600;
+		}
+		audio{
+			width: 100%;
+			margin:.24rem 0;
+		}
+		p{
+			font-size:.28rem;
+			color:#434343;
+			line-height: .54rem;
+			text-align: justify;
+			text-indent:2em;
+		}
+	}
+	.audio-right{
+		padding:.42rem;
+		img{
+			width: 100%;
+		}
+	}
+}

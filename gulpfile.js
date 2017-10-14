@@ -4,30 +4,34 @@ var path = require('path');
 var browserSync = require('browser-sync');
 var ejs = require('gulp-ejs');
 var rename = require('gulp-rename');
-var connect = require('gulp-connect'); 
+var connect = require('gulp-connect');
 
 
-gulp.task('develop',['server','ejs-watch']);
-gulp.task('production',['ejs-transform']);
+gulp.task('develop', ['server', 'ejs-watch']);
+gulp.task('production', ['ejs-transform']);
 gulp.task('ejs-watch', function() {
     gulp.watch('./develop/view/**/*.ejs', ['ejs-transform']);
 });
 
 //ejs 编译并 dest
-gulp.task('ejs-transform',function(){
-    gulp.src('./develop/view/*/*.ejs',{
-        base:process.cwd()
-    })
-    .pipe(ejs().on('error', function(err) {
-        gutil.log(err);
-        this.emit('end');
-    }))
-    .pipe(rename(function (path) {
-        path.dirname = 'html/' + path.dirname.split(/\\/).reverse()[0];
-        console.log(path.dirname)
-        path.extname = ".html";
-    }))
-    .pipe(gulp.dest('./static'))
+gulp.task('ejs-transform', function() {
+    gulp.src('./develop/view/*/*.ejs', {
+            base: process.cwd()
+        })
+        .pipe(ejs().on('error', function(err) {
+            gutil.log(err);
+            this.emit('end');
+        }))
+        .pipe(rename(function(path) {
+            // mac
+            path.dirname = 'html/' + path.basename;
+            // win
+            // path.dirname = 'html/' + path.basename.split(/\\/).reverse()[0];
+
+            console.log(path.dirname)
+            path.extname = ".html";
+        }))
+        .pipe(gulp.dest('./static'))
 })
 
 gulp.task('live-reload-watch', function() {

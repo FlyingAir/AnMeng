@@ -1,0 +1,32 @@
+@charset "UTF-8";
+@import 'base/base';
+.creater_page {
+    .img-content {
+        margin: .36rem 0;
+        img {
+            width: 100%;
+        }
+    }
+    .text-content {
+        p {
+            font-size: .28rem;
+            text-indent: 2em;
+            line-height: .54rem;
+            text-align: justify;
+        }
+    }
+    .founder-signature {
+    	margin-top: .2rem;
+        text-align: right;
+        span {
+            font-size: .30rem;
+            color: #023894;
+            display: inline-block;
+			
+        }
+        img {
+            width:25%;
+            vertical-align: middle;
+        }
+    }
+}

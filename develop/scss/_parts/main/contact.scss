@@ -1,0 +1,22 @@
+@charset "UTF-8";
+@import 'base/base';
+.contact_page{
+	.sh-center,.propagation-unit{
+		header{
+			font-size: .32rem;
+			color:#023894;
+		}
+		h3{
+			font-size:.30rem;
+			color:#df8dba;
+		}
+		.connect-info{
+			span{
+				font-size:.28rem;
+				a{
+					color:#434343;
+				}
+			}
+		}
+	}
+}

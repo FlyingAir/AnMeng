@@ -3,39 +3,51 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <title>Gshopper App</title>
+    <title>安柏教育</title>
     <link rel="stylesheet" href="./_static/css/fw7.css">
     <link rel="stylesheet" href="./css/common.css">
+    <script>
+    ! function(e) {
+        function t(a) { if (i[a]) return i[a].exports; var n = i[a] = { exports: {}, id: a, loaded: !1 }; return e[a].call(n.exports, n, n.exports, t), n.loaded = !0, n.exports }
+        var i = {};
+        return t.m = e, t.c = i, t.p = "", t(0)
+    }([function(e, t) {
+        "use strict";
+        Object.defineProperty(t, "__esModule", { value: !0 });
+        var i = window;
+        t["default"] = i.flex = function(normal, e, t) {
+            var a = e || 100,
+                n = t || 1,
+                r = i.document,
+                o = navigator.userAgent,
+                d = o.match(/Android[\S\s]+AppleWebkit\/(\d{3})/i),
+                l = o.match(/U3\/((\d+|\.){5,})/i),
+                c = l && parseInt(l[1].split(".").join(""), 10) >= 80,
+                p = navigator.appVersion.match(/(iphone|ipad|ipod)/gi),
+                s = i.devicePixelRatio || 1;
+            p || d && d[1] > 534 || c || (s = 1);
+            var u = normal ? 1 : 1 / s,
+                m = r.querySelector('meta[name="viewport"]');
+            m || (m = r.createElement("meta"), m.setAttribute("name", "viewport"), r.head.appendChild(m)), m.setAttribute("content", "width=device-width,user-scalable=no,initial-scale=" + u + ",maximum-scale=" + u + ",minimum-scale=" + u), r.documentElement.style.fontSize = normal ? "50px" : a / 2 * s * n + "px"
+        }, e.exports = t["default"]
+    }]);
+    flex(false, 100, 1);
+    </script>
+    <style>
+        .item-title{
+            font-size: .40rem;
+        }
+    </style>
 </head>
 
-<body style="overflow: scroll;height:2000px;">
+<body style="width: 100%;margin:0 auto;">
     <div class="statusbar-overlay"></div>
     <div class="panel-overlay"></div>
     <div class="views">
         <!-- view data-page-->
         <div class="view view-main" data-page="toolbar-bottom">
-            <div class="pages navbar-fixed">
+            <div class="pages">
                 <div data-page="toolbar-bottom" class="page page-on-center">
-                    <div class="navbar">
-                        <div class="navbar-inner">
-                            <div class="left"><a href="#" class="back link icon-only"><i class="icon icon-back"></i></a></div>
-                            <div class="center">Bottom Toolbar</div>
-                            <div class="right"><a href="#" class="link open-panel icon-only"><i class="icon icon-bars"></i></a></div>
-                        </div>
-                    </div>
-                    <div class="toolbar toolbar-bottom nav">
-                        <div class="toolbar-inner">
-                            <a href="#" class="link no-animation"><i class="icon icon-home"></i></a>
-                            <a href="#" class="link no-animation"><i class="icon icon-nav"></i></a>
-                            <a href="#" class="link no-animation"><i class="icon icon-cart"><span>99</span></i></a>
-                            <a href="#" class="link no-animation"><i class="icon icon-mypage"></i></a>
-                            <a href="#" class="link no-animation"><i class="icon icon-history"><span>99</span></i></a>
-                        </div>
-                    </div>
                     <!-- page -->
                     <div class="page-content">
                         <div class="content-block">
@@ -46,21 +58,86 @@
                                         <div class="item-divider">main</div>
                                     </li>
                                     <li>
-                                        <a href="./html/develop/view/main/main.html" class="item-link item-content">
+                                        <a href="./html/main/main.html" class="item-link item-content">
                                             <div class="item-inner">
                                                 <div class="item-title">main</div>
                                             </div>
                                         </a>
                                     </li>
-
                                     <!-- mainpage -->
                                     <li>
-                                        <div class="item-divider">test</div>
+                                        <div class="item-divider">集团简介</div>
                                     </li>
                                     <li>
-                                        <a href="./html/develop/view/test/test.html" class="item-link item-content">
+                                        <a href="./html/groupProfile/groupProfile.html" class="item-link item-content">
                                             <div class="item-inner">
-                                                <div class="item-title">test</div>
+                                                <div class="item-title">集团简介</div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <!-- mainpage -->
+                                    <li>
+                                        <div class="item-divider">教育理念</div>
+                                    </li>
+                                    <li>
+                                        <a href="./html/eduIdea/eduIdea.html" class="item-link item-content">
+                                            <div class="item-inner">
+                                                <div class="item-title">教育理念</div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <!-- mainpage -->
+                                    <li>
+                                        <div class="item-divider">创始人说</div>
+                                    </li>
+                                    <li>
+                                        <a href="./html/creater/creater.html" class="item-link item-content">
+                                            <div class="item-inner">
+                                                <div class="item-title">创始人说</div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <!-- mainpage -->
+                                    <li>
+                                        <div class="item-divider">感统</div>
+                                    </li>
+                                    <li>
+                                        <a href="./html/sence/sence.html" class="item-link item-content">
+                                            <div class="item-inner">
+                                                <div class="item-title">感统</div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <!-- mainpage -->
+                                    <li>
+                                        <div class="item-divider">科学育儿</div>
+                                    </li>
+                                    <li>
+                                        <a href="./html/listen/listen.html" class="item-link item-content">
+                                            <div class="item-inner">
+                                                <div class="item-title">科学育儿</div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <!-- mainpage -->
+                                    <li>
+                                        <div class="item-divider">成人学校</div>
+                                    </li>
+                                    <li>
+                                        <a href="./html/adult/adult.html" class="item-link item-content">
+                                            <div class="item-inner">
+                                                <div class="item-title">成人学校</div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <!-- mainpage -->
+                                    <li>
+                                        <div class="item-divider">联系我们</div>
+                                    </li>
+                                    <li>
+                                        <a href="./html/contact/contact.html" class="item-link item-content">
+                                            <div class="item-inner">
+                                                <div class="item-title">联系我们</div>
                                             </div>
                                         </a>
                                     </li>
@@ -79,7 +156,6 @@
     <script src="js/app.js"></script>
     <script type="text/javascript" src="./js/common.js"></script>
     <script type="text/javascript" src="./js/common02.js"></script>
-
 </body>
 
 </html>

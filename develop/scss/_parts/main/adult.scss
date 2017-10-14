@@ -1,0 +1,106 @@
+@charset "UTF-8";
+@import 'base/base';
+.iconlocation {
+    width: .275rem;
+    height: .345rem;
+    display: inline-block;
+    background: url('../img/connect01.png') no-repeat;
+    background-size: 100% 100%;
+    margin-right: .225rem;
+    vertical-align: middle;
+    margin-bottom: .08rem;
+    margin-left: .02rem;
+}
+
+.iconphone {
+    width: .225rem;
+    height: .33rem;
+    display: inline-block;
+    background: url('../img/connect02.png') no-repeat;
+    background-size: 100% 100%;
+    margin-right: .265rem;
+    margin-left: .05rem;
+    margin-bottom: .08rem;
+    vertical-align: middle;
+}
+
+.iconmail {
+    width: .39rem;
+    height: .27rem;
+    display: inline-block;
+    background: url('../img/connect03.png') no-repeat;
+    background-size: 100% 100%;
+    margin-right: .22rem;
+    vertical-align: middle;
+    margin-bottom: .08rem;
+    margin-left: -.05rem;
+}
+.iconinter{
+    width:.315rem;
+    height:.30rem;
+    display:inline-block;
+    background:url('../img/connect04.png') no-repeat;
+     background-size: 100% 100%;
+    margin-right: .26rem;
+    vertical-align: middle;
+    margin-bottom: .08rem;
+    margin-left: -.01rem;
+}
+.iconright {
+    width: .18rem;
+    height: .33rem;
+    display: inline-block;
+    background: url('../img/right.png') no-repeat;
+    vertical-align: middle;
+    background-size:100% 100%;
+    margin-right: .2rem;
+    margin-bottom: .06rem;
+}
+
+.adult_page {
+    .img-content {
+        padding: 0 .48rem;
+        margin-bottom: .30rem;
+        img{
+            width: 100%;
+        }
+    }
+    .main-content {
+        p {
+            font-size: .28rem;
+            color: #434343;
+            line-height: .54rem;
+            text-align: justify;
+            text-indent: 2em;
+        }
+    }
+    .connect-info {
+        color: #434343;
+
+        margin-top: .24rem;
+        >div {
+            height: .50rem;
+            line-height: .50rem;
+        }
+        span {
+            font-size: .26rem;
+        }
+        a {
+            color: #434343;
+        }
+    }
+    .training-reg-btn {
+    	margin:.24rem auto;
+        width: 30%;
+        height: .74rem;
+        line-height:.74rem;
+        background: #e9b0cf;
+        text-align: center;
+        a {
+            color:#fff;
+            font-size:.32rem;
+        }
+        i {}
+        span {}
+    }
+}
