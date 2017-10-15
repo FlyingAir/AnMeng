@@ -35,24 +35,26 @@
     margin-bottom: .08rem;
     margin-left: -.05rem;
 }
-.iconinter{
-    width:.315rem;
-    height:.30rem;
-    display:inline-block;
-    background:url('../img/connect04.png') no-repeat;
-     background-size: 100% 100%;
+
+.iconinter {
+    width: .315rem;
+    height: .30rem;
+    display: inline-block;
+    background: url('../img/connect04.png') no-repeat;
+    background-size: 100% 100%;
     margin-right: .26rem;
     vertical-align: middle;
     margin-bottom: .08rem;
     margin-left: -.01rem;
 }
+
 .iconright {
     width: .18rem;
     height: .33rem;
     display: inline-block;
     background: url('../img/right.png') no-repeat;
     vertical-align: middle;
-    background-size:100% 100%;
+    background-size: 100% 100%;
     margin-right: .2rem;
     margin-bottom: .06rem;
 }
@@ -61,7 +63,7 @@
     .img-content {
         padding: 0 .48rem;
         margin-bottom: .30rem;
-        img{
+        img {
             width: 100%;
         }
     }
@@ -69,7 +71,7 @@
         p {
             font-size: .28rem;
             color: #434343;
-            line-height: .54rem;
+            line-height: .50rem;
             text-align: justify;
             text-indent: 2em;
         }
@@ -90,15 +92,16 @@
         }
     }
     .training-reg-btn {
-    	margin:.24rem auto;
+        margin: .24rem auto;
         width: 30%;
         height: .74rem;
-        line-height:.74rem;
+        line-height: .74rem;
         background: #e9b0cf;
         text-align: center;
+        min-width: 200px;
         a {
-            color:#fff;
-            font-size:.32rem;
+            color: #fff;
+            font-size: .32rem;
         }
         i {}
         span {}

@@ -1,2 +1,69 @@
 @charset "UTF-8";
 @import 'base/base';
+.kindergarten_page {
+    .img-content {
+        padding: 0 .48rem;
+        margin-bottom: .30rem;
+        margin-top: .36rem;
+        img {
+            width: 100%;
+        }
+    }
+    .main-container {
+        p {
+            font-size: .28rem;
+            color: #434343;
+            line-height: .50rem;
+            text-align: justify;
+            text-indent: 2em;
+        }
+    }
+    .connect-info {
+        color: #434343;
+
+        margin-top: .24rem;
+        >div {
+            height: .50rem;
+            line-height: .50rem;
+        }
+        span {
+            font-size: .26rem;
+        }
+        a {
+            color: #434343;
+        }
+    }
+    .buttons {
+        text-align: center;
+    }
+    .training-reg-btn,
+    .garten-web {
+        display: inline-block;
+        margin: .36rem .24rem;
+        width: 30%;
+        height: .74rem;
+        line-height: .74rem;
+        background: #e9b0cf;
+        text-align: center;
+        min-width: 200px;
+        a {
+            color: #fff;
+            font-size: .32rem;
+        }
+        i {}
+        span {}
+    }
+    .garten-web {
+        background-color: #023894;
+    }
+    header {
+        font-size: .30rem;
+        font-weight: 600;
+    }
+    .text {
+        font-size: .28rem;
+        color: #434343;
+        line-height: .50rem;
+        text-align: justify;
+    }
+}

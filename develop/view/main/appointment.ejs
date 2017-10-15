@@ -3,35 +3,97 @@
 <div class="views">
     <div class="view view-main">
         <div class="pages">
-            <div data-page="adult" class="page page-on-center adult_page">
-                <% include ./_parts/top %>
-                    <div class="main_content">
-                        <!-- 导航栏 -->
-                        <div class="nav-bar">
-                            <div class="nav-level01"><span>培训学校</span><i class="sanjiao"></i></div>
-                            <div class="nav-level02"><span>安柏成人培训学校</span><i class="sanjiao"></i></div>
-                        </div>
-                        <div class="main-container">
-                            <div class="img-content">
-                                <img src="../../../../img/adultschool.png" alt="">
+            <div data-page="appointment" class="page page-on-center appointment_page">
+                <div class="page-content">
+                    <% include ./_parts/top %>
+                        <div class="main_content">
+                            <!-- 导航栏 -->
+                            <div class="nav-bar">
+                                <div class="nav-level01"><span>培训学校</span><i class="sanjiao"></i></div>
+                                <div class="nav-level02"><span>安柏成人培训学校</span><i class="sanjiao"></i></div>
                             </div>
-                            <div class="main-content">
-                                <p> 安柏成人培训学校汲取上海静安区安柏蒙特梭利进修学校多年办园经验，于2017年成立，业务集幼师培训、家长培训为一体。乔吟老师带领国内外教研团队共同研发接轨国际的先进教育理念培训课程，搭建高端幼教资源平台。
-                                </p>
-                                <p>幼师培训课程：挑选及引进全球特色教育体系、教学方法及优质师资和先进教育理念，打造完善的培训体系，为全国育儿机构及幼儿教师个体提供多样化的培训服务。</p>
-                                <p>家长培训课程：从脑科学、心理学角度出发，通过丰富的真实案例分析并教会家长如何建立健康的亲子关系，使孩子拥有稳定的情绪，宽广的胸怀，并能够健康和茁壮的成长。</p>
-                                <div class="connect-info">
-                                    <div> <i class="iconlocation"></i><span>上海市静安区昌平路 68 号 3 幢 607 室 </span></div>
-                                    <div> <i class='iconphone'></i><span>021-62670866 </span></div>
-                                    <div> <i class='iconmail'></i><span><a href="mailto:training.school@amber-edu.com.cn">training.school@amber-edu.com.cn</a></span></div>
+                            <div class="main-container">
+                                <div class="form-content">
+                                    <div class="form-item">
+                                        <span class="label-title">宝宝姓名</span>
+                                        <input type="text" name="name" class="baby-name">
+                                        <i class="statu"></i>
+                                    </div>
+                                    <div class="form-item">
+                                        <span class="label-title">宝宝生日</span>
+                                        <input type="text" id="demo-1" class="baby-birth">
+                                        <i class="statu"></i>
+                                    </div>
+                                    <div class="form-item">
+                                        <span class="label-title">宝宝国籍</span>
+                                        <input type="text" name='country' class="baby-country">
+                                        <i class="statu"></i>
+                                    </div>
+                                    <div class="form-item">
+                                        <span class="label-title">宝宝性别</span>
+                                        <div class="sewv sex">
+                                            <div class="sewvtop"><span>请选择..</span><em><img src="./img/selebom.png"></em></div>
+                                            <ul class="sewvbm">
+                                                <li data-id="S001">男</li>
+                                                <li data-id="S002">女</li>
+                                            </ul>
+                                        </div>
+                                        <i class="statu"></i>
+                                    </div>
+                                    <div class="form-item">
+                                        <span class="label-title">家长姓名</span>
+                                        <input type="text" name='parentname' class="parent-name">
+                                        <i class="statu"></i>
+                                    </div>
+                                    <div class="form-item">
+                                        <span class="label-title">联系电话</span>
+                                        <input type="tel" name='phone' class="parent-tel">
+                                        <i class="statu"></i>
+                                    </div>
+                                    <div class="form-item">
+                                    </div>
+                                    <div class="form-item">
+                                        <span class="label-title">联系邮箱</span>
+                                        <input type="text" name='email' class="parent-mail">
+                                        <i class="statu"></i>
+                                    </div>
+                                    <div class="form-item">
+                                        <span class="label-title">参观校区</span>
+                                        <div class="sewv visit">
+                                            <div class="sewvtop"><span>请选择..</span><em><img src="./img/selebom.png"></em></div>
+                                            <ul class="sewvbm">
+                                                <li data-id="V001">上海市静安区民办安蒙幼儿园</li>
+                                            </ul>
+                                        </div>
+                                        <i class="statu"></i>
+                                    </div>
+                                    <div class="form-item">
+                                        <span class="label-title">参观时间</span>
+                                        <input type="text" id="demo-2" class="visit-time">
+                                        <i class="statu"></i>
+                                    </div>
+                                    <div class="form-item">
+                                        <span class="label-title" style="float:left;margin-top:.20rem;">参观原因</span>
+                                        <textarea name="text" id="" resize="none" style="margin-top:.20rem;"></textarea class="visit-reason">
+                                        <i class="statu"></i>
+                                    </div>
+                                    <div class="warning-text" style="visibility: hidden;">请完善预约资料</div>
+                                    <div class="buttons">
+                                        <div class="submit-btn">
+                                            <i class="iconright"></i>预约参观
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="main-bottom">
+                                    <div class="qc-img"><img src="./img/qc-contact01.png" alt=""></div>
+                                    <div class="text-box">
+                                        <span class='text-content'>如您想及时获得安柏教育旗下幼儿园的教育资讯以及招生信息，请您扫描此二维码关注幼儿园官方微信。</span>
+                                    </div>
                                 </div>
                             </div>
-                                <div class="buttons">
-                                    <div class="training-reg-btn"><a href=""><i class="iconright"></i>培训报名</a></div>
-                                </div>
                         </div>
-                    </div>
-                    <% include ./_parts/bottom %>
+                        <% include ./_parts/bottom %>
+                </div>
             </div>
         </div>
     </div>

@@ -1,2 +1,114 @@
 @charset "UTF-8";
 @import 'base/base';
+
+
+
+
+
+
+/* 预约参观 */
+
+.training_page .form-content .form-item,
+.appointment_page .form-content .form-item {
+    margin-bottom: .40rem;
+}
+
+.training_page .form-item .label,
+.appointment_page .form-item .label-title {
+    font-size: .28rem; // width:1.2rem;
+    padding-right: .24rem;
+    color: #434343; // display:inline-block;
+}
+
+.training_page .form-item input,
+.appointment_page .form-item input {
+    width: 55%;
+    height: .60rem;
+    border: .02rem solid #e6e6e6;
+    font-size: .28rem;
+    padding-left: 5%;
+}
+
+.training_page .form-item i,
+.appointment_page .form-item i {
+    position: relative;
+    top: .20rem;
+    left: .20rem;
+}
+
+.training_page .warning-text,
+.appointment_page .warning-text {
+    padding-left: 1.3rem;
+    font-size: .28rem;
+    color: #e7afce;
+    margin-top: .24rem;
+    margin-bottom: .40rem;
+}
+
+.training_page,
+.appointment_page {
+    .buttons {
+        text-align: center;
+        .submit-btn,
+        .submit-btn {
+            display: inline-block;
+            cursor: pointer;
+            background-color: #e7afce;
+            width: 16%;
+            min-width: 2rem;
+            height: .60rem;
+            line-height: .60rem;
+            /* padding-left: .30rem;*/
+            color: #ffffff;
+            font-size: .30rem;
+        }
+    }
+}
+
+
+.appointment_page .submit-btn {
+    background-color: #b4c4e3;
+}
+
+.appointment_page textarea {
+    height: 1.8rem;
+    width: 55%;
+    resize: none;
+    font-size: .28rem;
+    border: .02rem solid #e6e6e6;
+    padding-left: 5%;
+    line-height: .48rem;
+}
+
+.appointment_page .right-content {
+    padding-bottom: 10px;
+}
+
+.main-bottom {
+    width: 90%;
+    margin: 0 auto;
+    background-color: #023894;
+    margin-top: .24rem;
+    display: flex;
+    align-items:center;
+    padding: .10rem;
+    .qc-img {
+        width: 20%;
+        img {
+            width: 100%;
+        }
+    }
+    .text-box {
+    	width: 80%;
+        height: 100%;
+    }
+    .text-content {
+		display:inline-block;
+		text-align:justify;
+        font-size: .22rem;
+        line-height: .30rem;
+        font-weight: 400;
+        padding:0 .24rem;
+        color: #fff;
+    }
+}
