@@ -1,2 +1,37 @@
 @charset "UTF-8";
 @import 'base/base';
+.book_page{
+	.book-item{
+		text-align: center;
+		>img{
+			width: 40%;	
+		}
+		>h3{
+			font-size:.30rem;
+			color:#023894;
+			margin:.24rem 0;
+		}
+		>.info-title{
+			font-size:.28rem;
+			text-align:left;
+		}
+		p{
+			text-indent: 2em;
+			font-size:.28rem;
+			line-height:.54rem;	
+			text-align:justify;
+		}
+		.more-btn{
+			width: 30%;
+			background-color:#df8dba;
+			height:.56rem;
+			line-height:.56rem;
+			border-radius:.24rem;
+			font-size:.30rem;
+			text-align: center;
+			color:#FFF;
+			font-weight:400;
+			margin: .10rem auto .56rem;
+		}
+	}
+}
