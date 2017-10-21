@@ -27,6 +27,12 @@
 }
 
 .list-block.accordion-list.row {
+    .accordion-item{
+        pointer-events: none;
+        a{
+            pointer-events:visible;
+        }
+    }
     margin: 0;
     margin-top: -8px;
     >ul {
@@ -171,7 +177,7 @@
         h3 {
             font-size: .32rem;
             text-align: center;
-            height: .54rem;
+            // height: .54rem;
             font-weight: 400;
             i.rec-icon01 {
                 img {
@@ -229,7 +235,7 @@
         }
     }
     .img-content02 {
-        padding:.3rem 1.4rem;
+        padding:.3rem 1.2rem;
         display: -webkit-flex;
 
         display: flex;
@@ -248,5 +254,34 @@
                 color:#023894;
             }
         }
+    }
+}
+.menu-icon01{
+    display:inline-block;
+    width: .48rem;
+    height: .41rem;
+    background: url("../img/menuIcon01.png") no-repeat center center/cover;
+}
+.menu-icon02{
+    display:inline-block;
+    width: .42rem;
+    height: .29rem;
+    background: url("../img/menuIcon02.png") no-repeat center center/cover;
+    margin-bottom:.06rem;
+}
+.menu-icon03{
+    display:inline-block;
+    width: .39rem;
+    height: .39rem;
+    background: url("../img/menuIcon03.png") no-repeat center center/cover;
+    margin-bottom:.01rem;
+
+}
+
+.menu-icon-content{
+    padding:0 .32rem;
+    vertical-align:middle;
+    i{
+        margin-right: .32rem;
     }
 }

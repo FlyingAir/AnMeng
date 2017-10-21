@@ -35,10 +35,13 @@ myApp.onPageInit('listen', function(page) {
 });
 
 myApp.onPageInit('*', function(page) {
-    // console.log(page)
-    $$(".hamburger").click(function() {
-        $$(this).toggleClass("is-active");
-    });
+    $$('.menu-icon01').click(function() {
+        $$(".page>.page-content").scrollTop($$(".page>.page-content").height() + 600, 400)
+    })
+    $$('.menu-icon02,.menu-icon01,.menu-icon03,.list-button').click(function() {
+        myApp.closeModal('.popover-links')
+    })
+
 
     $$(".back-top").click(function() {
         $$(".page-content").scrollTop(0, 600);
@@ -46,25 +49,66 @@ myApp.onPageInit('*', function(page) {
     });
     // 下拉框效果
     //子导航展开收缩
-    $(".sewvtop").click(function() {
+    $(".form-item .sewvtop").click(function() {
         $(this).find("em").removeClass("lbaxztop2").addClass("lbaxztop").parents(".sewv").siblings().children(".sewvtop").find("em").removeClass("lbaxztop").addClass(".lbaxztop2");
         $(this).next(".sewvbm").toggle().parents(".sewv").siblings().find(".sewvbm").hide();
     });
 
     /*鼠标离开下拉框关闭*/
-    $(".sewv").mouseleave(function() {
+    $(".form-item .sewv").mouseleave(function() {
         $(".sewvbm").hide();
         $(this).children(".sewvtop").find("em").addClass("lbaxztop2");
     });
 
-
     //赋值
-    $(".sewvbm>li").click(function() {
+    $(".form-item .sewvbm>li").click(function() {
         var selva = $(this).text();
         $(this).parents(".sewvbm").siblings(".sewvtop").find("span").text(selva);
         $(this).parent("ul").hide();
         $(this).parents(".sewv").children(".sewvtop").find("em").addClass("lbaxztop2");
     });
+
+    $(".nav-bar .sewvtop").click(function() {
+        event.stopPropagation()
+
+        $(this).find("em").removeClass("lbaxztop2").addClass("lbaxztop").parents(".sewv").siblings().children(".sewvtop").find("em").removeClass("lbaxztop").addClass(".lbaxztop2");
+        $(this).next(".sewvbm").stop(true, false).slideToggle().parents(".sewv").siblings().find(".sewvbm").stop(true, false).slideToggle();
+    });
+
+    //赋值
+    $(".nav-left .sewvbm>li").click(function() {
+        event.stopPropagation()
+
+        var selva = $(this).find('span').text();
+        $(this).parents(".sewvbm").siblings(".sewvtop").find("span").find('a').text(selva);
+        if ($(this).hasClass('nav01')) {
+            $('.current').hide()
+            $('.other-nav.nav01').show().siblings('.other-nav').hide();
+        } else if ($(this).hasClass('nav02')) {
+            $('.current').hide()
+            $('.other-nav.nav02').show().siblings('.other-nav').hide();
+        } else if ($(this).hasClass('nav03')) {
+            $('.current').hide()
+            $('.other-nav.nav03').show().siblings('.other-nav').hide();
+        } else if ($(this).hasClass('nav04')) {
+            $('.current').hide()
+            $('.other-nav.nav04').show().siblings('.other-nav').hide();
+        }
+        $(this).parents(".sewv").children(".sewvtop").find("em").addClass("lbaxztop2");
+    });
+    $(".nav-right .sewvbm>li").click(function() {
+        $('.nav-left ul').slideUp();
+        $('.current').find('ul').slideUp();
+        $('.other-nav').find('ul').slideUp();
+    })
+
+    $(document).click(function(event) {
+        event.stopPropagation()
+        $('.nav-left ul').slideUp();
+        $('.current').find('ul').slideUp();
+        $('.other-nav').find('ul').slideUp();
+
+    })
 })
 
 myApp.onPageInit('main', function(page) {
@@ -79,15 +123,19 @@ function mInit() {
         pagination: '.swiper-pagination01',
         // spaceBetween: 100 // 50px between slides
     });
-    $$(".hamburger").click(function() {
-        $$(this).toggleClass("is-active");
-    });
 
 
     $$(".back-top").click(function() {
         $$(".page-content").scrollTop(0, 600);
         // return false;
     });
+
+    $$('.menu-icon01').click(function() {
+        $$(".page>.page-content").scrollTop($$(".page>.page-content").height() + 600, 400)
+    })
+    $$('.menu-icon02,.menu-icon01,.menu-icon03,.list-button').click(function() {
+        myApp.closeModal('.popover-links')
+    })
 }
 mInit();
 
@@ -206,7 +254,42 @@ myApp.onPageInit('appointment', function(page) {
 
     });
 
+    $('.baby-birth').focus(function() {
+        // 日期选择器
+        var nowValue = document.getElementById('demo-1');
+        new DatePicker({
+            "type": "3", //0年, 1年月, 2月日, 3年月日
+            "title": '请选择日期', //标题(可选)
+            "maxYear": "2017", //最大年份（可选）
+            "minYear": "2000", //最小年份（可选）
+            "separator": "-", //分割符(可选)
+            "defaultValue": "2013-01-01", //默认值（可选）
+            "callBack": function(val) {
+                //回调函数（val为选中的日期）
+                nowValue.value = val;
+            }
+        });
 
+    })
+    $('.visit-time').focus(function(event) {
+        var timestamp = Date.parse(new Date());
+        var date = new Date(timestamp);
+        date = date.toLocaleDateString().split('/').join("-");
+        console.log(date)
+        var nowValue = document.getElementById('demo-2');
+        new DatePicker({
+            "type": "3", //0年, 1年月, 2月日, 3年月日
+            "title": '请选择日期', //标题(可选)
+            "maxYear": "2050", //最大年份（可选）
+            "minYear": "2016", //最小年份（可选）
+            "separator": "-", //分割符(可选)
+            "defaultValue": date, //默认值（可选）
+            "callBack": function(val) {
+                //回调函数（val为选中的日期）
+                nowValue.value = val;
+            }
+        });
+    });
     // 表单验证
     $('.form-item input').each(function(index, el) {
         $(el).blur(function(event) {
