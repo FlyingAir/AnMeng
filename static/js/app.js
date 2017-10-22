@@ -2,11 +2,12 @@
 var_app_history = [];
 
 var myApp = new Framework7({
-    modalTitle: '安蒙',
+    modalTitle: '安柏',
     // Enable Material theme
     material: true,
     materialRipple: false,
     pushState: true,
+    cache: false
 });
 
 // Expose Internal DOM library
@@ -15,6 +16,25 @@ var $$ = Dom7;
 // Add main view
 var mainView = myApp.addView('.view-main', {});
 
+
+var myPhotoBrowserPopupDark = myApp.photoBrowser({
+    photos: [{
+            url: './img/follow02.png',
+            caption: '长江0-3岁科学育儿国际研究院',
+            maxZoom: '2',
+            zoom:true
+        },
+        {
+            url: './img/follow03.png',
+            caption: '安柏蒙特梭利教育',
+            maxZoom: '2',
+            zoom:true
+
+        },
+    ],
+    theme: 'dark',
+    type: 'standalone'
+});
 $$(document).on('ajaxStart', function(e) {
 
     myApp.showIndicator();
@@ -36,7 +56,7 @@ myApp.onPageInit('listen', function(page) {
 
 myApp.onPageInit('*', function(page) {
     $$('.menu-icon01').click(function() {
-        $$(".page>.page-content").scrollTop($$(".page>.page-content").height() + 600, 400)
+        myPhotoBrowserPopupDark.open();
     })
     $$('.menu-icon02,.menu-icon01,.menu-icon03,.list-button').click(function() {
         myApp.closeModal('.popover-links')
@@ -123,7 +143,10 @@ function mInit() {
         pagination: '.swiper-pagination01',
         // spaceBetween: 100 // 50px between slides
     });
-
+    var mySwiper = myApp.swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        // spaceBetween: 100 // 50px between slides
+    });
 
     $$(".back-top").click(function() {
         $$(".page-content").scrollTop(0, 600);
@@ -131,7 +154,7 @@ function mInit() {
     });
 
     $$('.menu-icon01').click(function() {
-        $$(".page>.page-content").scrollTop($$(".page>.page-content").height() + 600, 400)
+        $$(".page>.page-content").scrollTop($$(".page>.page-content").height() + 2000, 400)
     })
     $$('.menu-icon02,.menu-icon01,.menu-icon03,.list-button').click(function() {
         myApp.closeModal('.popover-links')
